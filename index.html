@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crys Wood</title>
+    <style>
+        :root {
+            --bg-color: #f7f7f7;
+            --border-purple: #8154e3;
+            --btn-orange: #f89321;
+            --btn-grey: #b3b3b3;
+            --ribbon-grey: #999999;
+            --text-main: #111111;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #ffffff;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            color: var(--text-main);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .card-container {
+            background-color: var(--bg-color);
+            border: 3px solid var(--border-purple);
+            max-width: 1100px;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            gap: 60px;
+            padding: 60px 80px;
+        }
+
+        /* --- Left Column --- */
+        .left-col {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        h1 {
+            font-size: 4.5rem;
+            line-height: 1.1;
+            font-weight: 600;
+            margin-bottom: 30px;
+            letter-spacing: -0.03em;
+        }
+
+        .portrait {
+            width: 100%;
+            max-width: 350px;
+            /* If your image has a square background, this creates the organic blob shape */
+            border-radius: 40% 60% 50% 50% / 50% 50% 60% 40%;
+            object-fit: cover;
+        }
+
+        /* --- Right Column --- */
+        .right-col {
+            flex: 1.2;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        h2 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            line-height: 1.4;
+        }
+
+        p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .quote {
+            font-style: italic;
+            text-align: center;
+            margin: 30px 0;
+            font-size: 1.15rem;
+        }
+
+        /* --- Buttons --- */
+        .btn-group {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            width: 100%;
+        }
+
+        .btn-row {
+            display: flex;
+            gap: 15px;
+        }
+
+        .btn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 18px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-decoration: none;
+            color: #fff;
+            width: 100%;
+            position: relative;
+            overflow: hidden;
+            transition: opacity 0.2s;
+        }
+
+        .btn:hover {
+            opacity: 0.9;
+        }
+
+        .btn-orange {
+            background-color: var(--btn-orange);
+            color: var(--text-main);
+        }
+
+        .btn-disabled {
+            background-color: var(--btn-grey);
+            cursor: not-allowed;
+            color: #ffffff;
+        }
+
+        .ribbon {
+            position: absolute;
+            top: 15px;
+            left: -30px;
+            background-color: var(--ribbon-grey);
+            color: white;
+            padding: 3px 30px;
+            font-size: 0.8rem;
+            font-weight: normal;
+            transform: rotate(-45deg);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        hr {
+            margin-top: 15px;
+            border: none;
+            border-top: 2px solid #ccc;
+        }
+
+        /* --- Mobile Responsiveness --- */
+        @media (max-width: 800px) {
+            .card-container {
+                flex-direction: column;
+                padding: 40px 25px;
+                gap: 40px;
+            }
+            .btn-row {
+                flex-direction: column;
+            }
+            h1 {
+                font-size: 3.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card-container">
+        <div class="left-col">
+            <h1>This is<br>Crys Wood</h1>
+            <img src="portrait.png" alt="Portrait of Crys Wood" class="portrait">
+        </div>
+
+        <div class="right-col">
+            <h2>I help marketing leaders future-proof their B2B website content for AI-driven search.</h2>
+            <p>The world is obsessed with moving fast, but I move with strategic care to ensure my clients' website content is more likely to be found, trusted, selected, and cited by generative-AI tools like ChatGPT and answer engines like Perplexity. This work helps with accessibility and good ol' search engines, too.</p>
+            
+            <p class="quote">I take the time now to do it right,<br>so you won't have to make time later to do it over.</p>
+
+            <div class="btn-group">
+                <div class="btn btn-disabled">
+                    <span class="ribbon">soon</span>
+                    Ping + Echo: AEO/GEO optimization
+                </div>
+                
+                <div class="btn-row">
+                    <a href="YOUR_NEWSLETTER_LINK_HERE" class="btn btn-orange">OM Newsletter</a>
+                    <a href="YOUR_LINKEDIN_LINK_HERE" class="btn btn-orange">LinkedIn</a>
+                </div>
+
+                <div class="btn btn-disabled">
+                    <span class="ribbon">soon</span>
+                    POETIC Prompts: a friendly framework
+                </div>
+                <hr>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
